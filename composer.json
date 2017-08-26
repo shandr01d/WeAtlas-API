@@ -1,0 +1,30 @@
+{
+    "name" : "shandra/weatlasapibundle",
+    "description" : "Excursions weatlas api bundle",
+    "version" : "0.1.0-dev",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Alexandr Shandra",
+        "email" : "shandra.alexandr@gmail.com"
+    }],
+    "keywords" : [
+        "weatltas api excursions bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "symfony/framework-bundle": "2.8.*",
+        "twig/extensions": "~1.0"
+    },
+    "autoload": {
+        "psr-4": { "Shandra\\WeatlasApiBundle\\": "" }
+    },
+    "repositories" : [{
+    }],
+    "extra" : {
+    "branch-alias" : {
+            "dev-master" : "0.1.x-dev"
+        }
+    }
+}

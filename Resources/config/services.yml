@@ -1,0 +1,10 @@
+services:
+    shandra_weatlas_api:
+        class: Shandra\WeatlasApiBundle\Service\WeatlasAPI
+        arguments: [ '%shandra_weatlas_api.aid%', '%shandra_weatlas_api.key%' ]
+        
+    shandra_weatlas_api.twig:
+        class: Shandra\WeatlasApiBundle\Twig\WeatlasExtension
+        arguments: [ @shandra_weatlas_api ]
+        tags:
+            - { name: twig.extension }
