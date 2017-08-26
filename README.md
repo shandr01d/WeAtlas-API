@@ -32,7 +32,7 @@ class AppKernel extends Kernel
     {
         $bundles = array(
             // ...
-            new Shandra\WeatlasApiBundle\DevyWeatlasApiBundle(),
+            new Shandra\WeatlasApiBundle\ShandraWeatlasApiBundle(),
         );
 
         // ...
