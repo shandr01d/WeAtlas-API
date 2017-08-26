@@ -42,8 +42,45 @@ class AppKernel extends Kernel
 }
 ```
 
-Step 3: Basic usage
+Step 3: Setup your credentials
+------------------------------
+```yaml
+
+shandra_weatlas_api:
+    aid: XXXXX
+    key: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+```
+
+Step 4: Import routes(optional)
+-------------------------------
+```yaml
+
+weatlas_api_search:
+    resource: "@ShandraWeatlasApiBundle/Resources/config/routing.yml"
+    prefix:   /
+
+```
+
+Basic usage
 -------------------------
+
+In controller
+
+```php
+
+/* @var $api WeatlasAPI */
+$api = $this->get('shandra_weatlas_api');
+$method = 'export/activitylist/;
+$params = array();
+$result = $api->makeRequest($method, $params);
+
+```
+
+In template
+
 ```twig
+
 {{ WeatlasAPI('export/activitylist/', {})|json_encode() }}
+
 ```
